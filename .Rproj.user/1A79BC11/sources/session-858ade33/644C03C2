@@ -1,0 +1,26 @@
+{
+    "id": "644C03C2",
+    "path": "~/Documents/BodenKarte/gk_zu_gps.R",
+    "project_path": "gk_zu_gps.R",
+    "type": "r_source",
+    "hash": "2472075256",
+    "contents": "",
+    "dirty": false,
+    "created": 1725180430260.0,
+    "source_on_save": false,
+    "relative_order": 8,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "82,31",
+        "scrollLine": "49"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1625434431,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1625434431,
+    "read_only": false,
+    "read_only_alternatives": []
+}

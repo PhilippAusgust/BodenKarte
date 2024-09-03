@@ -1,0 +1,26 @@
+{
+    "id": "ED347E8F",
+    "path": "~/Documents/BodenKarte/auswertung_bölingen.R",
+    "project_path": "auswertung_bölingen.R",
+    "type": "r_source",
+    "hash": "312212426",
+    "contents": "",
+    "dirty": false,
+    "created": 1725191274411.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "8,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1725101231,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1725101231,
+    "read_only": false,
+    "read_only_alternatives": []
+}

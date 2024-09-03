@@ -1,0 +1,26 @@
+{
+    "id": "877A7C59",
+    "path": "~/Documents/BodenKarte/barycentric.R",
+    "project_path": "barycentric.R",
+    "type": "r_source",
+    "hash": "3157498405",
+    "contents": "",
+    "dirty": true,
+    "created": 1725191167995.0,
+    "source_on_save": false,
+    "relative_order": 7,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "34,1",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1725101597,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1725191376588,
+    "read_only": false,
+    "read_only_alternatives": []
+}
