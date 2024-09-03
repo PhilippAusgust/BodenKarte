@@ -1,42 +1,76 @@
-# getColorFromValue <- function(value, colors, PRINT = FALSE) {
-#   interval_width <- 1 / (nrow(colors) - 1)
-#   k <- floor(value / interval_width)
-#   percentage <- (value - (k * interval_width)) / interval_width
-#   
-#   left <- k + 1 
-#   right <- left + 1
-#   
-#   r <- as.numeric(colors[left, "r"]) - ((as.numeric(colors[left, "r"]) - as.numeric(colors[right, "r"])) * percentage)
-#   g <- as.numeric(colors[left, "g"]) - ((as.numeric(colors[left, "g"]) - as.numeric(colors[right, "g"])) * percentage)
-#   b <- as.numeric(colors[left, "b"]) - ((as.numeric(colors[left, "b"]) - as.numeric(colors[right, "b"])) * percentage)
-#   
-#   return (list("r" = r, "g" = g, "b" = b))
-# }
-# 
-# getColorString <- function(color) {
-#   return (paste("rgb(", color["r"], ",", color["g"], ",", color["b"], ")", sep = ""))
-# }
-# 
-# getHexWith0 <- function(val) {
-#   if(val <= 15) {
-#     return (as.character(paste("0", as.character(as.hexmode(as.numeric(val))), sep="")))
-#   } else {
-#     return (as.character(as.hexmode(as.numeric(val))))
-#   }
-# }
-# 
-# getColorHexString <- function(color) {
-#   return (paste("#", getHexWith0(color["r"]), getHexWith0(color["g"]), getHexWith0(color["b"]), sep = ""))
-# }
+getColorFromValue <- function(value, colors, PRINT = FALSE) {
+  interval_width <- 1 / (nrow(colors) - 1)
+  print(interval_width)
+  k <- floor(value / interval_width)
+  print(k)
+  percentage <- (value - (k * interval_width)) / interval_width
+
+  left <- k + 1
+  right <- left + 1
+
+  r <- as.numeric(colors[left, "r"]) - ((as.numeric(colors[left, "r"]) - as.numeric(colors[right, "r"])) * percentage)
+  g <- as.numeric(colors[left, "g"]) - ((as.numeric(colors[left, "g"]) - as.numeric(colors[right, "g"])) * percentage)
+  b <- as.numeric(colors[left, "b"]) - ((as.numeric(colors[left, "b"]) - as.numeric(colors[right, "b"])) * percentage)
+
+  return (list("r" = r, "g" = g, "b" = b))
+}
+
+colors <- data.frame(
+  "h" = c(0, 60, 120, 180, 240),    # Hue-Werte (in Grad, normalisiert zwischen 0 und 1)
+  "s" = c(1, 1, 1, 1, 1),           # Saturation (immer 100% in diesem Beispiel)
+  "v" = c(0.9, 0.8, 0.7, 0.6, 0.5)  # Value (Helligkeit)
+)
+
+
+colors <- data.frame("r" = c(236, 255, 0, 20, 15), 
+                     "g" = c(207, 255, 183, 132, 69), 
+                     "b" = c(204, 255, 255, 255, 129))
+
+value = (as.numeric(225) - 100) / (250 - 100)
+getColorFromValue(value,colors)
+
+
+
+
+getColorString <- function(color) {
+  return (paste("rgb(", color["r"], ",", color["g"], ",", color["b"], ")", sep = ""))
+}
+
+getHexWith0 <- function(val) {
+  if(val <= 15) {
+    return (as.character(paste("0", as.character(as.hexmode(as.numeric(val))), sep="")))
+  } else {
+    return (as.character(as.hexmode(as.numeric(val))))
+  }
+}
+
+getColorHexString <- function(color) {
+  return (paste("#", getHexWith0(color["r"]), getHexWith0(color["g"]), getHexWith0(color["b"]), sep = ""))
+}
+
+
+colors <- data.frame(
+  "h" = c(0, 60, 120, 180, 240),    # Hue-Werte (in Grad, normalisiert zwischen 0 und 1)
+  "s" = c(1, 1, 1, 1, 1),           # Saturation (immer 100% in diesem Beispiel)
+  "v" = c(0.9, 0.8, 0.7, 0.6, 0.5)  # Value (Helligkeit)
+)
+
 
 
 getColorFromValue <- function(value, colors, PRINT = FALSE) {
   interval_width <- 1 / (nrow(colors) - 1)
+  print(interval_width)
   k <- floor(value / interval_width)
+  print(k)
   percentage <- (value - (k * interval_width)) / interval_width
+  print(percentage)
   
   left <- k + 1 
   right <- left + 1
+  print("left")
+  print(left)
+  print("right")
+  print(right)
   
   # Direkte Interpolation im HSV-Farbraum
   hue_diff <- colors[right, "h"] - colors[left, "h"]
@@ -55,12 +89,29 @@ getColorFromValue <- function(value, colors, PRINT = FALSE) {
   # Zurückkonvertieren in RGB
   interpolated_rgb <- hsv(hue, saturation, value)
   
-  r <- as.numeric(interpolated_rgb[1]) * 255
-  g <- as.numeric(interpolated_rgb[2]) * 255
-  b <- as.numeric(interpolated_rgb[3]) * 255
+  # r <- as.numeric(interpolated_rgb[1]) 
+  # g <- as.numeric(interpolated_rgb[2]) * 255
+  # b <- as.numeric(interpolated_rgb[3]) * 255
   
-  return(list("r" = r, "g" = g, "b" = b))
+  return(interpolated_rgb)
 }
+
+
+"#3A0091"
+
+
+ 
+
+wert = 250
+
+value = (as.numeric(wert) - 100) / (250 - 100)
+
+f = getColorFromValue(value = value, colors = colors)
+
+
+"#E60000"
+
+
 
 getColorString <- function(color) {
   return(paste("rgb(", color["r"], ",", color["g"], ",", color["b"], ")", sep = ""))

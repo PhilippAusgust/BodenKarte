@@ -1,26 +1,27 @@
 {
-    "id": "DF16CE1E",
-    "path": "~/Documents/BodenKarte/bodenkarte 2.R",
-    "project_path": "bodenkarte 2.R",
+    "id": "7A6BC73C",
+    "path": "~/Documents/BodenKarte/color_int.R",
+    "project_path": "color_int.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1725103116136.0,
+    "created": 1725356753015.0,
     "source_on_save": false,
-    "relative_order": 1,
+    "relative_order": 10,
     "properties": {
+        "tempName": "Untitled2",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "36,72",
-        "scrollLine": "4"
+        "cursorPosition": "65,27",
+        "scrollLine": "48"
     },
     "folds": "",
-    "lastKnownWriteTime": 1625703184,
+    "lastKnownWriteTime": 1725370521,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1625703184,
+    "last_content_update": 1725370521391,
     "read_only": false,
     "read_only_alternatives": []
 }
