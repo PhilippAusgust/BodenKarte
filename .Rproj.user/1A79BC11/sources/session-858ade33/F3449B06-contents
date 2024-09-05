@@ -24,7 +24,7 @@ maximum <- 250.0 #Var
 markerFontSize <- 15 #Var 
 showInterpolation <- TRUE # values: TRUE or FALSE
 showCircleMarkers <-TRUE # values: TRUE or FALSE
-showRectangleMarkers <- FALSE # values: TRUE or FALSE
+showRectangleMarkers <- TRUE # values: TRUE or FALSE
 showLabels <- TRUE
 
 #determine the aabb size of the grid
@@ -51,6 +51,7 @@ for (i in 1:nrow(raster)) {
   print(value)
   rgbColor <- getColorFromValue(value, colors)
   rgbString <- paste("rgb(", rgbColor["r"], ",", rgbColor["g"], ",", rgbColor["b"], ")", sep = "")
+  print(rgbString)
   m <- addLabelOnlyMarkers(m, labelOptions = labelOptions(style = list(
     "color" = "#000",
     "font-family" = "serif",

@@ -3,9 +3,9 @@
     "path": "~/Documents/BodenKarte/color_int.R",
     "project_path": "color_int.R",
     "type": "r_source",
-    "hash": "1857305380",
+    "hash": "0",
     "contents": "",
-    "dirty": false,
+    "dirty": true,
     "created": 1725356753015.0,
     "source_on_save": false,
     "relative_order": 10,
@@ -13,15 +13,15 @@
         "tempName": "Untitled2",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "43,2",
-        "scrollLine": "0"
+        "cursorPosition": "60,87",
+        "scrollLine": "30"
     },
     "folds": "",
-    "lastKnownWriteTime": 1725534989,
+    "lastKnownWriteTime": 1725537502,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1725534989794,
+    "last_content_update": 1725537717161,
     "read_only": false,
     "read_only_alternatives": []
 }

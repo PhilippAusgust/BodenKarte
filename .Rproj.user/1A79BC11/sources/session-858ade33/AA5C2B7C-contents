@@ -4,23 +4,48 @@ source("gk_zu_gps.R")
 source("barycentric.R")
 source("color_functions.R")
 source("Utilities.R")
+source("color_int.R")
 library(leaflet)
+
+
+
+
+m <- leaflet() 
+m <- addTiles(m)
+m <- addProviderTiles(m, "Esri.WorldImagery")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 raster <- read_excel("data/GPS_nFK.xlsx", sheet = 1, col_names = TRUE, col_types = NULL, na = "", skip = 0)
 
 
 createInterpolatedMap <- function(dataRaster = NULL, resolution = 50, 
-                                  vaalueMin = 100.0, valueMax= 250.0,
+                                  vaalueMin = 100, valueMax= 250.0,
                                   markerFontSize = 15, 
                                   mapType = "Esri.WorldImagery", 
                                   valueToInterpolate = "nFK",
                                   Label = "Rasterpunkt",labelFloor = FALSE){
   
    
-                        "#ECCFCC" "#FFFFFF" "#00B7FF" "#1484FF" "#0F4581" # farben zwischen denen interpoliert wird. 
-  colors <- data.frame("r" = c(236, 255, 0, 20, 15), 
-                       "g" = c(207, 255, 183, 132, 69), 
-                       "b" = c(204, 255, 255, 255, 129))
+                      #  "#ECCFCC" "#FFFFFF" "#00B7FF" "#1484FF" "#0F4581" # farben zwischen denen interpoliert wird. 
+  # colors <- data.frame("r" = c(236, 255, 0, 20, 15), 
+  #                      "g" = c(207, 255, 183, 132, 69), 
+  #                      "b" = c(204, 255, 255, 255, 129))
   
   #determine the aabb size of the grid
   lat_min = min(dataRaster["lat"])
@@ -41,7 +66,7 @@ createInterpolatedMap <- function(dataRaster = NULL, resolution = 50,
   m <- addProviderTiles(m, mapType)
   print(m)
   
-  res1 = showLabel(Data = dataRaster, Label = Label, m= m, labelFloor = labelFloor, showCircle = TRUE)
+  res1 = showLabel(Data = dataRaster, Label = Label, m= m, labelFloor = labelFloor, showCircle = TRUE, minVal = vaalueMin, maxVal =valueMax )
 
   
   
@@ -54,5 +79,5 @@ createInterpolatedMap <- function(dataRaster = NULL, resolution = 50,
 
 
 
-createInterpolatedMap(dataRaster = raster, Label = "Rasterpunkt", labelFloor = FALSE)
+createInterpolatedMap(dataRaster = raster, Label = "nFK", labelFloor = TRUE)
 
