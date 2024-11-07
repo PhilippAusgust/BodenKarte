@@ -15,5 +15,17 @@ The Soil Map project enables the visualization of points on maps and the interpo
 A possible input table could look as shown above.
 
 The result of the interpolation could look like this:
-
+### Map 1 
 ![Soilmap 1](data/map1.png)
+
+
+### Map 2
+
+Omly Gridpoints
+
+![Soilmap 1](data/map.png)
+### Map 3 
+
+Interpolation 
+
+![Soilmap 1](data/map.png)
