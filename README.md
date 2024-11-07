@@ -28,4 +28,4 @@ Omly Gridpoints
 
 Interpolation 
 
-![Soilmap 1](data/map.png)
+![Soilmap 1](data/mapi.png)
