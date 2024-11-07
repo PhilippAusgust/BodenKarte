@@ -16,4 +16,4 @@ A possible input table could look as shown above.
 
 The result of the interpolation could look like this:
 
-![Soilmap 1](data/Bildschirmfoto_2024-11-07_um_23.05.59.png)
+![Soilmap 1](data/map1.png)
