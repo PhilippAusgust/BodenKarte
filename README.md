@@ -16,3 +16,4 @@ A possible input table could look as shown above.
 
 The result of the interpolation could look like this:
 
+![Soilmap 1 ](path/to/your/image.png)
